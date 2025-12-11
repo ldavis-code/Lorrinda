@@ -25,9 +25,11 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="w-full aspect-square bg-gray-200 rounded-2xl flex items-center justify-center mb-6">
-                <span className="font-serif text-8xl text-gray-400">LGD</span>
-              </div>
+              <img
+                src="/images/lorrinda-headshot.jpg"
+                alt="Lorrinda Gray-Davis - Professional Portrait"
+                className="w-full aspect-square object-cover rounded-2xl shadow-lg mb-6"
+              />
             </div>
             <div>
               <h2 className="font-serif text-3xl font-bold mb-6">The Story</h2>

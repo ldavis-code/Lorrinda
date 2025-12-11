@@ -32,6 +32,7 @@ const Navbar: React.FC = () => {
               <Link
                 key={link.path}
                 to={link.path}
+                aria-current={isActive(link.path) ? 'page' : undefined}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isActive(link.path)
                     ? 'text-primary border-b-2 border-primary'
@@ -63,6 +64,7 @@ const Navbar: React.FC = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
+                aria-current={isActive(link.path) ? 'page' : undefined}
                 className={`block py-2 text-sm font-medium ${
                   isActive(link.path)
                     ? 'text-primary'

@@ -10,9 +10,10 @@ export default defineConfig(({ mode }) => {
         host: '0.0.0.0',
       },
       plugins: [react()],
+      // NOTE: API keys should NOT be exposed to client-side code
+      // If you need server-side API calls, use a backend proxy
       define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+        'process.env.NODE_ENV': JSON.stringify(mode)
       },
       resolve: {
         alias: {

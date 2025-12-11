@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Mail, Linkedin } from 'lucide-react';
 
+const CONTACT_EMAIL = 'contact@lorrindagraydavis.com';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/lorrinda-gray-davis';
+
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -52,14 +55,14 @@ const Footer: React.FC = () => {
             <h4 className="font-semibold text-white mb-4">Connect</h4>
             <div className="flex space-x-4">
               <a
-                href="mailto:contact@lorrindagraydavis.com"
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="text-gray-400 hover:text-accent transition-colors"
                 aria-label="Email"
               >
                 <Mail size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-accent transition-colors"

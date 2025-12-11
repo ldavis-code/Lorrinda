@@ -54,9 +54,9 @@ const Awards: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-3xl font-bold text-center mb-12">Recognition Timeline</h2>
           <div className="space-y-6 max-w-4xl mx-auto">
-            {AWARDS.map((award, index) => (
+            {AWARDS.map((award) => (
               <div
-                key={index}
+                key={award.id}
                 className="flex gap-6 items-start bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow"
               >
                 <div className="flex-shrink-0">

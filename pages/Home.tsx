@@ -158,15 +158,15 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {TESTIMONIALS.map((testimonial) => (
               <div key={testimonial.id} className="bg-white/10 backdrop-blur p-6 rounded-lg">
-                <p className="text-blue-100 italic mb-4">"{testimonial.text}"</p>
+                <p className="text-slate-200 italic mb-4">"{testimonial.text}"</p>
                 <div>
                   <p className="font-semibold">{testimonial.author}</p>
-                  <p className="text-blue-200 text-sm">{testimonial.title}</p>
+                  <p className="text-slate-300 text-sm">{testimonial.title}</p>
                   {testimonial.organization && (
-                    <p className="text-blue-300 text-sm">{testimonial.organization}</p>
+                    <p className="text-slate-400 text-sm">{testimonial.organization}</p>
                   )}
                   {testimonial.year && (
-                    <p className="text-blue-300 text-sm">{testimonial.year}</p>
+                    <p className="text-slate-400 text-sm">{testimonial.year}</p>
                   )}
                 </div>
               </div>
@@ -181,7 +181,7 @@ const Home: React.FC = () => {
           <h2 className="font-serif text-3xl font-bold text-white mb-4">
             Ready to Inspire Your Audience?
           </h2>
-          <p className="text-blue-100 mb-8">
+          <p className="text-slate-200 mb-8">
             Book Lorrinda for your next event, conference, or organization meeting.
           </p>
           <Link

@@ -88,7 +88,7 @@ const Awards: React.FC = () => {
                 <Star className="text-accent" size={32} />
               </div>
               <div className="text-5xl font-bold mb-2">$1B+</div>
-              <p className="text-blue-200">
+              <p className="text-slate-300">
                 Awarded to minority and women-owned businesses
               </p>
             </div>
@@ -97,7 +97,7 @@ const Awards: React.FC = () => {
                 <Star className="text-accent" size={32} />
               </div>
               <div className="text-5xl font-bold mb-2">15+</div>
-              <p className="text-blue-200">
+              <p className="text-slate-300">
                 Years of advocacy and leadership
               </p>
             </div>

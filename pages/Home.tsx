@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-emerald-800 text-white py-20 lg:py-32">
+      <section className="bg-gradient-to-br from-primary to-emerald-700 text-white py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -161,15 +161,15 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {TESTIMONIALS.map((testimonial) => (
               <div key={testimonial.id} className="bg-white/10 backdrop-blur p-6 rounded-lg">
-                <p className="text-blue-100 italic mb-4">"{testimonial.text}"</p>
+                <p className="text-indigo-100 italic mb-4">"{testimonial.text}"</p>
                 <div>
                   <p className="font-semibold">{testimonial.author}</p>
-                  <p className="text-blue-200 text-sm">{testimonial.title}</p>
+                  <p className="text-indigo-200 text-sm">{testimonial.title}</p>
                   {testimonial.organization && (
-                    <p className="text-blue-300 text-sm">{testimonial.organization}</p>
+                    <p className="text-indigo-300 text-sm">{testimonial.organization}</p>
                   )}
                   {testimonial.year && (
-                    <p className="text-blue-300 text-sm">{testimonial.year}</p>
+                    <p className="text-indigo-300 text-sm">{testimonial.year}</p>
                   )}
                 </div>
               </div>

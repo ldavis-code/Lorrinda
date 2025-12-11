@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Mail, Linkedin } from 'lucide-react';
 
-// TODO: Update these with actual contact information
 const CONTACT_EMAIL = 'contact@lorrindagraydavis.com';
-const LINKEDIN_URL = 'https://linkedin.com/in/lorrinda-gray-davis'; // TODO: Verify LinkedIn URL
+const LINKEDIN_URL = 'https://www.linkedin.com/in/lorrinda-gray-davis';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

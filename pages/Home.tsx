@@ -7,46 +7,36 @@ const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section
-        className="relative text-white py-24 lg:py-36 min-h-[600px] flex items-center"
-        style={{
-          backgroundImage: 'url(/images/hero-background.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-slate-900/75"></div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-primary to-emerald-900 text-white py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             {/* Featured badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/50 bg-primary/10 mb-8">
-              <span className="w-2 h-2 bg-primary rounded-full"></span>
-              <span className="text-sm font-medium text-primary">Featured in Cancer Today, Summer 2025</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/30 bg-white/10 mb-8">
+              <span className="w-2 h-2 bg-white rounded-full"></span>
+              <span className="text-sm font-medium text-white">Featured in Cancer Today, Summer 2025</span>
             </div>
 
             <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
-              The Power of <span className="italic text-primary">Connection</span>
+              The Power of <span className="italic text-emerald-200">Connection</span>
             </h1>
-            <p className="text-lg lg:text-xl text-gray-300 mb-10 max-w-2xl">
+            <p className="text-lg lg:text-xl text-emerald-100 mb-10 max-w-2xl">
               From overseeing billion-dollar construction diversity initiatives to
               reforming national organ transplant governance. Lorrinda Gray-Davis is
               a voice for the silenced and a leader for the future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                to="/speaking"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-emerald-800 transition-colors"
+                to="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-emerald-50 transition-colors"
               >
                 Book Lorrinda
                 <ArrowRight className="ml-2" size={18} />
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center justify-center px-8 py-4 border border-white/50 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
               >
-                Read Biography
+                About Lorrinda
               </Link>
             </div>
           </div>

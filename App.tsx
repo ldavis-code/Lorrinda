@@ -13,7 +13,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen font-sans text-gray-900">
+      <div className="flex flex-col min-h-screen font-sans text-body">
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>

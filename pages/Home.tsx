@@ -39,7 +39,7 @@ const Home: React.FC = () => {
                 to="/speaking"
                 className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-emerald-800 transition-colors"
               >
-                Book for Speaking
+                Book Lorrinda
                 <ArrowRight className="ml-2" size={18} />
               </Link>
               <Link

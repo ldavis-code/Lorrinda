@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, Mic, Heart } from 'lucide-react';
+import { ArrowRight, Award, Mic, Heart, ExternalLink } from 'lucide-react';
 import { TESTIMONIALS, TIMELINE } from '../constants';
 
 const Home: React.FC = () => {
@@ -36,9 +36,54 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="hidden lg:flex justify-center">
-              <div className="w-80 h-80 bg-emerald-600 rounded-full flex items-center justify-center">
-                <span className="font-serif text-6xl text-white opacity-50">LGD</span>
-              </div>
+              <img
+                src="/images/lorrinda-headshot.jpg"
+                alt="Lorrinda Gray-Davis"
+                className="w-80 h-80 object-cover rounded-full shadow-2xl border-4 border-white/20"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured In Section */}
+      <section className="py-12 bg-white border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+            <div className="lg:w-1/3">
+              <a
+                href="https://www.cancertodaymag.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:opacity-90 transition-opacity"
+              >
+                <img
+                  src="/images/cancer-today-cover.jpg"
+                  alt="Cancer Today Magazine Cover - Summer 2025 featuring Lorrinda Gray-Davis"
+                  className="w-full max-w-xs mx-auto rounded-lg shadow-lg"
+                />
+              </a>
+            </div>
+            <div className="lg:w-2/3 text-center lg:text-left">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">Featured In</p>
+              <h2 className="font-serif text-3xl font-bold mb-4">Cancer Today Magazine</h2>
+              <p className="text-gray-600 mb-4">
+                Cover story: <strong>"The Power of Connection"</strong> — After receiving a new liver,
+                cancer survivor Lorrinda Gray-Davis supports the transplant community through advocacy,
+                education, and the healing power of human connection.
+              </p>
+              <p className="text-sm text-gray-500 mb-4">
+                Summer 2025 | Vol. 15, Issue 02 | American Association for Cancer Research
+              </p>
+              <a
+                href="https://www.cancertodaymag.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-primary font-semibold hover:underline"
+              >
+                Read the Article
+                <ExternalLink className="ml-2" size={16} />
+              </a>
             </div>
           </div>
         </div>

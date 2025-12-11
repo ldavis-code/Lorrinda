@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 
-// TODO: Update with actual contact email
 const CONTACT_EMAIL = 'contact@lorrindagraydavis.com';
+
+// Formspree form ID - Get yours free at https://formspree.io
+// 1. Create account at formspree.io
+// 2. Create a new form
+// 3. Replace 'YOUR_FORM_ID' with your actual form ID (e.g., 'xpzvqwer')
+const FORMSPREE_ID = 'YOUR_FORM_ID';
 
 interface FormState {
   status: 'idle' | 'loading' | 'success' | 'error';
@@ -31,20 +36,28 @@ const Contact: React.FC = () => {
     setFormState({ status: 'loading', message: '' });
 
     try {
-      // TODO: Replace with actual form submission endpoint
-      // For now, simulate a network request
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          organization: formData.organization,
+          eventType: formData.eventType,
+          message: formData.message,
+          _subject: `Speaking Inquiry from ${formData.name}`,
+        }),
+      });
 
-      // In production, you would send to an API:
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData),
-      // });
-      // if (!response.ok) throw new Error('Failed to send message');
-
-      console.log('Form submitted:', formData);
-      setFormState({ status: 'success', message: 'Your message has been sent successfully!' });
+      if (response.ok) {
+        setFormState({ status: 'success', message: 'Your message has been sent successfully!' });
+        setFormData({ name: '', email: '', organization: '', eventType: '', message: '' });
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       setFormState({
         status: 'error',

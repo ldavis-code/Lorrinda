@@ -6,7 +6,7 @@ const Awards: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-emerald-700 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-primary to-emerald-900 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
@@ -88,7 +88,7 @@ const Awards: React.FC = () => {
                 <Star className="text-accent" size={32} />
               </div>
               <div className="text-5xl font-bold mb-2">$1B+</div>
-              <p className="text-indigo-200">
+              <p className="text-blue-200">
                 Awarded to minority and women-owned businesses
               </p>
             </div>
@@ -97,7 +97,7 @@ const Awards: React.FC = () => {
                 <Star className="text-accent" size={32} />
               </div>
               <div className="text-5xl font-bold mb-2">100K+</div>
-              <p className="text-indigo-200">
+              <p className="text-blue-200">
                 Patients served by OPTN annually
               </p>
             </div>
@@ -106,7 +106,7 @@ const Awards: React.FC = () => {
                 <Star className="text-accent" size={32} />
               </div>
               <div className="text-5xl font-bold mb-2">15+</div>
-              <p className="text-indigo-200">
+              <p className="text-blue-200">
                 Years of advocacy and leadership
               </p>
             </div>

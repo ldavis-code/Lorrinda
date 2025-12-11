@@ -19,13 +19,13 @@ const Speaking: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-accent to-amber-700 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-accent to-teal-700 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
               Speaking & Presentations
             </h1>
-            <p className="text-xl text-amber-100">
+            <p className="text-xl text-teal-100">
               Inspiring audiences with authentic stories of resilience, leadership,
               and the transformative power of turning adversity into advocacy.
             </p>
@@ -134,7 +134,7 @@ const Speaking: React.FC = () => {
           <h2 className="font-serif text-3xl font-bold mb-4">
             Book Lorrinda for Your Event
           </h2>
-          <p className="text-indigo-100 mb-8">
+          <p className="text-blue-100 mb-8">
             Let's discuss how Lorrinda can inspire and empower your audience.
           </p>
           <Link

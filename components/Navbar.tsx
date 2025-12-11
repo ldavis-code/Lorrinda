@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-primary sticky top-0 z-50">
+    <nav className="bg-secondary sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center">
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isActive(link.path)
                     ? 'text-white border-b-2 border-white'
-                    : 'text-emerald-100 hover:text-white'
+                    : 'text-slate-300 hover:text-white'
                 }`}
               >
                 {link.label}
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-emerald-100 hover:text-white focus:outline-none"
+              className="text-slate-300 hover:text-white focus:outline-none"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
                 className={`block py-2 text-sm font-medium ${
                   isActive(link.path)
                     ? 'text-white'
-                    : 'text-emerald-100 hover:text-white'
+                    : 'text-slate-300 hover:text-white'
                 }`}
               >
                 {link.label}

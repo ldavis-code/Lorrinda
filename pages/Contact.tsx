@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+
+// TODO: Update with actual contact email
+const CONTACT_EMAIL = 'contact@lorrindagraydavis.com';
+
+interface FormState {
+  status: 'idle' | 'loading' | 'success' | 'error';
+  message: string;
+}
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +17,7 @@ const Contact: React.FC = () => {
     eventType: '',
     message: '',
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formState, setFormState] = useState<FormState>({ status: 'idle', message: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -18,11 +26,31 @@ const Contact: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, this would send the form data to a server
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    setFormState({ status: 'loading', message: '' });
+
+    try {
+      // TODO: Replace with actual form submission endpoint
+      // For now, simulate a network request
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // In production, you would send to an API:
+      // const response = await fetch('/api/contact', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(formData),
+      // });
+      // if (!response.ok) throw new Error('Failed to send message');
+
+      console.log('Form submitted:', formData);
+      setFormState({ status: 'success', message: 'Your message has been sent successfully!' });
+    } catch (error) {
+      setFormState({
+        status: 'error',
+        message: 'There was an error sending your message. Please try again or email directly.'
+      });
+    }
   };
 
   return (
@@ -62,10 +90,10 @@ const Contact: React.FC = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
                     <a
-                      href="mailto:contact@lorrindagraydavis.com"
+                      href={`mailto:${CONTACT_EMAIL}`}
                       className="text-primary hover:underline"
                     >
-                      contact@lorrindagraydavis.com
+                      {CONTACT_EMAIL}
                     </a>
                   </div>
                 </div>
@@ -94,7 +122,7 @@ const Contact: React.FC = () => {
 
             {/* Contact Form */}
             <div>
-              {isSubmitted ? (
+              {formState.status === 'success' ? (
                 <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
                   <CheckCircle className="mx-auto text-green-500 mb-4" size={48} />
                   <h3 className="font-serif text-2xl font-bold mb-2">Thank You!</h3>
@@ -192,12 +220,29 @@ const Contact: React.FC = () => {
                       />
                     </div>
 
+                    {formState.status === 'error' && (
+                      <div className="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                        <AlertCircle size={18} />
+                        <span>{formState.message}</span>
+                      </div>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-emerald-800 transition-colors"
+                      disabled={formState.status === 'loading'}
+                      className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-emerald-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Send Message
-                      <Send size={18} />
+                      {formState.status === 'loading' ? (
+                        <>
+                          <Loader2 size={18} className="animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Send Message
+                          <Send size={18} />
+                        </>
+                      )}
                     </button>
                   </div>
                 </form>

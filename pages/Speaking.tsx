@@ -42,8 +42,8 @@ const Speaking: React.FC = () => {
             keynotes, workshops, panel discussions, or intimate fireside chats.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {SPEAKING_TOPICS.map((topic, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+            {SPEAKING_TOPICS.map((topic) => (
+              <div key={topic.id} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
                     {categoryIcons[topic.category]}

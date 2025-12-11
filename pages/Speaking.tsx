@@ -134,7 +134,7 @@ const Speaking: React.FC = () => {
           <h2 className="font-serif text-3xl font-bold mb-4">
             Book Lorrinda for Your Event
           </h2>
-          <p className="text-blue-100 mb-8">
+          <p className="text-indigo-100 mb-8">
             Let's discuss how Lorrinda can inspire and empower your audience.
           </p>
           <Link

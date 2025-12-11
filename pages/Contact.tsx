@@ -69,13 +69,13 @@ const Contact: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-secondary to-blue-900 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-secondary to-indigo-600 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
               Let's Connect
             </h1>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-indigo-100">
               Interested in having Lorrinda speak at your event or collaborate
               on an advocacy initiative? Reach out and let's start a conversation.
             </p>
@@ -243,7 +243,7 @@ const Contact: React.FC = () => {
                     <button
                       type="submit"
                       disabled={formState.status === 'loading'}
-                      className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-emerald-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {formState.status === 'loading' ? (
                         <>

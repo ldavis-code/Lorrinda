@@ -1,13 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import { SPEAKING_TOPICS } from '../constants';
-
-const categoryColors: Record<string, string> = {
-  'Resilience': 'bg-amber-100 text-amber-700',
-  'Diversity': 'bg-emerald-100 text-emerald-700',
-  'Health & Advocacy': 'bg-yellow-100 text-yellow-700',
-};
 
 const Speaking: React.FC = () => {
   return (
@@ -17,132 +10,144 @@ const Speaking: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
-              Speaking & Keynotes
+              Consulting Services
             </h1>
             <p className="text-lg text-slate-300">
-              Lorrinda Gray-Davis delivers powerful presentations that bridge the gap between corporate strategy and human resilience.
+              Strategic guidance to help healthcare organizations center the patient voice and build meaningful engagement programs.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Why Book Section */}
+      {/* Why Work With Lorrinda Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-serif text-3xl font-bold mb-4">Why Book Lorrinda?</h2>
-            <p className="text-gray-600">
-              From the boardroom of billion-dollar construction projects to the hospital room of a transplant recovery, Lorrinda possesses a rare duality of experience. She teaches audiences how to find strength in vulnerability and how to build systems that truly include everyone.
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <h2 className="font-serif text-3xl font-bold mb-6">Why Work With Lorrinda?</h2>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              From leading $13 billion in construction projects to navigating a liver transplant and building a nationally recognized recovery program, Lorrinda brings a rare combination of executive leadership and lived patient experience. She helps organizations build systems that truly center the patient voice — and shows audiences how to find strength in vulnerability.
             </p>
           </div>
 
-          {/* Speaking Topics Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {SPEAKING_TOPICS.map((topic) => (
-              <div key={topic.id} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4 ${categoryColors[topic.category]}`}>
-                  {topic.category.toUpperCase()}
-                </span>
-                <h3 className="font-serif text-xl font-bold mb-3">{topic.title}</h3>
-                <p className="text-gray-600">{topic.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Perfect For Section */}
-      <section className="py-16 bg-secondary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-serif text-3xl font-bold mb-6 italic">Perfect For...</h2>
+          {/* Consulting Services Grid */}
+          <div className="space-y-12">
+            {/* Patient Advocacy & Engagement Consulting */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+              <h3 className="font-serif text-2xl font-bold mb-6 text-secondary">Patient Advocacy & Engagement Consulting</h3>
               <ul className="space-y-4">
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="text-primary flex-shrink-0" size={20} />
-                  <span>Medical & Healthcare Conferences</span>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Strategic guidance for transplant centers on building patient engagement programs</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="text-primary flex-shrink-0" size={20} />
-                  <span>Corporate Diversity & Inclusion Summits</span>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Patient voice integration for healthcare organizations, committees, and research initiatives</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="text-primary flex-shrink-0" size={20} />
-                  <span>Construction & Engineering Associations</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="text-primary flex-shrink-0" size={20} />
-                  <span>Women's Leadership Events</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="text-primary flex-shrink-0" size={20} />
-                  <span>Patient Advocacy Organizations</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="text-primary flex-shrink-0" size={20} />
-                  <span>Government & Policy Forums</span>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Advisory services for organizations seeking authentic patient perspective in decision-making</span>
                 </li>
               </ul>
             </div>
-            <div className="bg-slate-800 rounded-xl p-8">
-              <h3 className="font-serif text-2xl font-bold mb-4">Book Lorrinda for 2025</h3>
-              <p className="text-slate-300 mb-6">
-                Lorrinda is currently accepting engagements for late 2025 and 2026. Please inquire for availability.
-              </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center w-full px-6 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-              >
-                Request Availability
-                <ArrowRight className="ml-2" size={18} />
-              </Link>
+
+            {/* Peer Support Program Development */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+              <h3 className="font-serif text-2xl font-bold mb-6 text-secondary">Peer Support Program Development</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Design and implementation of peer mentorship programs for transplant patients</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Recovery support program development with proven methodology (497+ patients supported, 183 successful transplants, 85% sobriety rate)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Compliance tracking systems that demonstrate patient engagement to transplant centers</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Speaking & Training */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+              <h3 className="font-serif text-2xl font-bold mb-6 text-secondary">Speaking & Training</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Keynote presentations on patient advocacy, resilience, and the power of lived experience</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Healthcare staff training on patient-centered communication and support</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Conference presentations and panel participation (Poster of Distinction recipient, AASLD Liver Meeting)</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Research & Policy Consulting */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+              <h3 className="font-serif text-2xl font-bold mb-6 text-secondary">Research & Policy Consulting</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Patient perspective consultation for clinical trials and research design</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Advisory services for pharmaceutical companies and specialty pharmacies</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Grant development support for patient-focused initiatives (PCORI and other funding sources)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Co-investigator experience with peer-reviewed publication in Hepatology Communications</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Leadership & Governance */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+              <h3 className="font-serif text-2xl font-bold mb-6 text-secondary">Leadership & Governance</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Board development and governance consulting for patient-focused organizations</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Committee structure and patient representation strategy</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">Organizational development for nonprofit healthcare advocacy</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What to Expect Section */}
-      <section className="py-16">
+      {/* Call to Action Section */}
+      <section className="py-16 bg-secondary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl font-bold text-center mb-12">What to Expect</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 font-semibold">1</div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-1">Authentic Storytelling</h3>
-                  <p className="text-gray-600">Real experiences that resonate, from boardrooms to hospital rooms.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 font-semibold">2</div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-1">Actionable Insights</h3>
-                  <p className="text-gray-600">Practical takeaways your audience can implement immediately.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 font-semibold">3</div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-1">Customized Content</h3>
-                  <p className="text-gray-600">Every presentation is tailored to your organization's goals and audience.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 font-semibold">4</div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-1">Engaging Delivery</h3>
-                  <p className="text-gray-600">Interactive elements and Q&A to foster meaningful dialogue.</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <img
-                src="/images/remember-rejoice.jpg"
-                alt="Lorrinda speaking at Remember & Rejoice 2024"
-                className="rounded-xl shadow-lg max-w-full h-auto"
-              />
-            </div>
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="font-serif text-3xl font-bold mb-4">Ready to Get Started?</h2>
+            <p className="text-slate-300 mb-8">
+              Let's discuss how Lorrinda can help your organization build meaningful patient engagement and advocacy programs.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+            >
+              Schedule a Consultation
+              <ArrowRight className="ml-2" size={18} />
+            </Link>
           </div>
         </div>
       </section>

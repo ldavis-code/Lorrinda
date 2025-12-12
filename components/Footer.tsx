@@ -34,12 +34,12 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/speaking" className="text-slate-300 hover:text-white transition-colors text-sm">
-                  Speaking Topics
+                  Consulting
                 </Link>
               </li>
               <li>
                 <Link to="/awards" className="text-slate-300 hover:text-white transition-colors text-sm">
-                  Awards & Recognition
+                  Community Service
                 </Link>
               </li>
               <li>

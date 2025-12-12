@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Based In</h3>
                     <p className="text-gray-600">Temple, Texas</p>
-                    <p className="text-gray-500 text-sm">Available for events nationwide</p>
+                    <p className="text-gray-500 text-sm">Works nationally and internationally</p>
                   </div>
                 </div>
               </div>

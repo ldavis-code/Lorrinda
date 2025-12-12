@@ -105,26 +105,13 @@ const Home: React.FC = () => {
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <img
-                src="/images/headshot.jpg"
-                alt="Lorrinda Gray-Davis"
-                className="w-full rounded-2xl shadow-lg"
-              />
-              {/* Quote overlay */}
-              <div className="absolute bottom-0 right-0 translate-x-4 translate-y-4 lg:translate-x-8 lg:translate-y-8 bg-white p-6 rounded-xl shadow-lg max-w-xs">
-                <p className="text-gray-700 italic text-sm">
-                  "Whether in the construction industry or the transplant community, Ms. Gray-Davis is always striving for more."
-                </p>
-              </div>
+            <div>
               {/* Cancer Today image */}
-              <div className="mt-8">
-                <img
-                  src="/images/cancer-today.gif"
-                  alt="Featured in Cancer Today"
-                  className="w-full max-w-md rounded-lg shadow-md"
-                />
-              </div>
+              <img
+                src="/images/cancer-today.gif"
+                alt="Featured in Cancer Today"
+                className="w-full max-w-md rounded-lg shadow-md"
+              />
             </div>
             <div>
               <h2 className="font-serif text-3xl lg:text-4xl font-bold mb-6">

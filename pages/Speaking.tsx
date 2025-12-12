@@ -104,8 +104,8 @@ const Speaking: React.FC = () => {
       {/* What to Expect Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl font-bold text-center mb-12">What to Expect</h2>
+          <h2 className="font-serif text-3xl font-bold text-center mb-12">What to Expect</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="flex gap-4">
                 <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 font-semibold">1</div>
@@ -135,6 +135,13 @@ const Speaking: React.FC = () => {
                   <p className="text-gray-600">Interactive elements and Q&A to foster meaningful dialogue.</p>
                 </div>
               </div>
+            </div>
+            <div className="flex justify-center">
+              <img
+                src="/remember-rejoice 2024.jpg"
+                alt="Lorrinda speaking at Remember & Rejoice 2024"
+                className="rounded-xl shadow-lg max-w-full h-auto"
+              />
             </div>
           </div>
         </div>

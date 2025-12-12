@@ -108,7 +108,7 @@ const Home: React.FC = () => {
             <div className="relative">
               <img
                 src="/images/lorrinda-nature.jpg"
-                alt="Lorrinda Gray-Davis"
+                alt=""
                 className="w-full rounded-2xl shadow-lg"
               />
               {/* Quote overlay */}

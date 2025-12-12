@@ -84,7 +84,8 @@ const Home: React.FC = () => {
               </div>
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wide">Leadership</p>
-                <p className="font-semibold text-gray-900">President, TRIO Oklahoma</p>
+                <p className="font-semibold text-gray-900">President, Transplant Recipients International Org</p>
+                <p className="font-semibold text-gray-900">Founder, TRIO-Oklahoma</p>
               </div>
             </div>
             <div className="flex items-center gap-4 p-4">
@@ -134,7 +135,7 @@ const Home: React.FC = () => {
                   Lorrinda Gray-Davis is a force of nature. Formerly a top executive overseeing diversity for a $9 billion construction project, she shattered glass ceilings in a male-dominated industry.
                 </p>
                 <p>
-                  In 2018, her life took a dramatic turn with a liver cancer diagnosis. Today, as a transplant survivor, she applies that same executive leadership to advocate for patients nationwide, serving on federal committees and inspiring audiences with her story of resilience.
+                  In 2017, her life took a dramatic turn with a liver cancer diagnosis. Today, as a transplant survivor, she applies that same executive leadership to advocate for patients nationwide, serving on federal committees and inspiring audiences with her story of resilience.
                 </p>
               </div>
               <Link

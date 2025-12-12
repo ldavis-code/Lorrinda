@@ -16,35 +16,50 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/95 to-gray-900/70"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            {/* Featured badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/50 bg-primary/10 mb-8">
-              <span className="w-2 h-2 bg-primary rounded-full"></span>
-              <span className="text-sm font-medium text-primary">Featured in Cancer Today, Summer 2025</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text content */}
+            <div>
+              {/* Featured badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/50 bg-primary/10 mb-8">
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
+                <span className="text-sm font-medium text-primary">Featured in Cancer Today, Summer 2025</span>
+              </div>
+
+              <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
+                The Power of <span className="italic text-primary">Connection</span>
+              </h1>
+              <p className="text-lg lg:text-xl text-gray-300 mb-10 max-w-2xl">
+                From overseeing billion-dollar construction diversity initiatives to
+                reforming national organ transplant governance. Lorrinda Gray-Davis is
+                a voice for the silenced and a leader for the future.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  Book for Speaking
+                  <ArrowRight className="ml-2" size={18} />
+                </Link>
+                <Link
+                  to="/about"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-500 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
+                >
+                  Read Biography
+                </Link>
+              </div>
             </div>
 
-            <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
-              The Power of <span className="italic text-primary">Connection</span>
-            </h1>
-            <p className="text-lg lg:text-xl text-gray-300 mb-10 max-w-2xl">
-              From overseeing billion-dollar construction diversity initiatives to
-              reforming national organ transplant governance. Lorrinda Gray-Davis is
-              a voice for the silenced and a leader for the future.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-              >
-                Book for Speaking
-                <ArrowRight className="ml-2" size={18} />
-              </Link>
-              <Link
-                to="/about"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-500 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
-              >
-                Read Biography
-              </Link>
+            {/* Headshot */}
+            <div className="hidden lg:flex justify-center lg:justify-end">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-primary/20 rounded-full blur-2xl"></div>
+                <img
+                  src="/images/headshot.jpg"
+                  alt="Lorrinda Gray-Davis"
+                  className="relative w-80 h-80 xl:w-96 xl:h-96 rounded-full object-cover object-top border-4 border-white/20 shadow-2xl"
+                />
+              </div>
             </div>
           </div>
         </div>

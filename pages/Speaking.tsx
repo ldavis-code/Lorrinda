@@ -132,7 +132,7 @@ const Speaking: React.FC = () => {
                   <img
                     src="/images/advocating.jpg"
                     alt="Advocating - Research and Policy"
-                    className="w-full md:w-64 h-48 object-cover rounded-lg shadow-md"
+                    className="w-full md:w-64 h-48 object-cover object-top rounded-lg shadow-md"
                   />
                 </div>
               </div>
@@ -160,7 +160,7 @@ const Speaking: React.FC = () => {
                   <img
                     src="/images/aasld-transplant.jpg"
                     alt="AASLD Transplant - Leadership and Governance"
-                    className="w-full md:w-64 h-48 object-cover rounded-lg shadow-md"
+                    className="w-full md:w-64 h-48 object-cover object-top rounded-lg shadow-md"
                   />
                 </div>
               </div>

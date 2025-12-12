@@ -129,6 +129,13 @@ const Home: React.FC = () => {
                   In 2018, her life took a dramatic turn with a liver cancer diagnosis. Today, as a transplant survivor, she applies that same executive leadership to advocate for patients nationwide, serving on federal committees and inspiring audiences with her story of resilience.
                 </p>
               </div>
+              <div className="mt-6 mb-4">
+                <img
+                  src="/images/cancer-today.gif"
+                  alt="Featured in Cancer Today"
+                  className="w-full max-w-md rounded-lg shadow-md"
+                />
+              </div>
               <Link
                 to="/about"
                 className="inline-flex items-center mt-6 text-primary font-semibold hover:underline"

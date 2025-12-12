@@ -109,7 +109,7 @@ const Speaking: React.FC = () => {
             {/* Research & Policy Consulting */}
             <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
               <h3 className="font-serif text-2xl font-bold mb-6 text-secondary">Research & Policy Consulting</h3>
-              <div className="flex flex-col md:flex-row gap-8">
+              <div className="flex flex-col md:flex-row md:items-center gap-8">
                 <ul className="space-y-4 flex-1">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -141,7 +141,7 @@ const Speaking: React.FC = () => {
             {/* Leadership & Governance */}
             <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
               <h3 className="font-serif text-2xl font-bold mb-6 text-secondary">Leadership & Governance</h3>
-              <div className="flex flex-col md:flex-row gap-8">
+              <div className="flex flex-col md:flex-row md:items-center gap-8">
                 <ul className="space-y-4 flex-1">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />

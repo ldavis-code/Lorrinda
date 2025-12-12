@@ -6,7 +6,7 @@ export const AWARDS: Award[] = [
     year: "2025",
     title: "Appointed to OPTN Transitional Nominating Committee",
     organization: "Health Resources & Services Administration (HRSA)",
-    description: "Selected to reform governance of the Organ Procurement and Transplantation Network, serving over 100,000 patients annually."
+    description: "Selected to reform governance of the Organ Procurement and Transplantation Network."
   },
   {
     id: 'award-commendation-2025',

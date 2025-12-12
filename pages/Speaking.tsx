@@ -25,7 +25,7 @@ const Speaking: React.FC = () => {
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="font-serif text-3xl font-bold mb-6">Why Work With Lorrinda?</h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              From leading $13 billion in construction projects to navigating a liver transplant and building a nationally recognized recovery program, Lorrinda brings a rare combination of executive leadership and lived patient experience. She helps organizations build systems that truly center the patient voice — and shows audiences how to find strength in vulnerability.
+              From leading $13 billion in construction projects to navigating a liver transplant and building a nationally recognized peer program, Lorrinda brings a rare combination of executive leadership and lived patient experience. She helps organizations build systems that truly center the patient voice — and shows audiences how to find strength in vulnerability.
             </p>
           </div>
 

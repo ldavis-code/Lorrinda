@@ -116,6 +116,14 @@ const Home: React.FC = () => {
                   "Whether in the construction industry or the transplant community, Ms. Gray-Davis is always striving for more."
                 </p>
               </div>
+              {/* Cancer Today image */}
+              <div className="mt-8">
+                <img
+                  src="/images/cancer-today.gif"
+                  alt="Featured in Cancer Today"
+                  className="w-full max-w-md rounded-lg shadow-md"
+                />
+              </div>
             </div>
             <div>
               <h2 className="font-serif text-3xl lg:text-4xl font-bold mb-6">
@@ -128,13 +136,6 @@ const Home: React.FC = () => {
                 <p>
                   In 2018, her life took a dramatic turn with a liver cancer diagnosis. Today, as a transplant survivor, she applies that same executive leadership to advocate for patients nationwide, serving on federal committees and inspiring audiences with her story of resilience.
                 </p>
-              </div>
-              <div className="mt-6 mb-4">
-                <img
-                  src="/images/cancer-today.gif"
-                  alt="Featured in Cancer Today"
-                  className="w-full max-w-md rounded-lg shadow-md"
-                />
               </div>
               <Link
                 to="/about"

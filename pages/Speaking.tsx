@@ -138,7 +138,7 @@ const Speaking: React.FC = () => {
             </div>
             <div className="flex justify-center">
               <img
-                src="/remember-rejoice 2024.jpg"
+                src="/images/remember-rejoice.jpg"
                 alt="Lorrinda speaking at Remember & Rejoice 2024"
                 className="rounded-xl shadow-lg max-w-full h-auto"
               />

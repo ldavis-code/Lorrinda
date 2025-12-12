@@ -46,10 +46,28 @@ export const AWARDS: Award[] = [
     organization: "Women's Chamber of Commerce Nevada"
   },
   {
+    id: 'award-top25-2010',
+    year: "2010",
+    title: "Top 25 Women Impacting Diversity",
+    organization: "MBN News Magazine"
+  },
+  {
+    id: 'award-top25-diversity-2009',
+    year: "2009",
+    title: "Top 25 Diversity Programs in the U.S.",
+    organization: "MBN News Magazine"
+  },
+  {
+    id: 'award-top25-2009',
+    year: "2009",
+    title: "Top 25 Women Impacting Diversity",
+    organization: "MBN News Magazine"
+  },
+  {
     id: 'award-top25-2008',
     year: "2008",
-    title: "Top 25 Women in Power Impacting Diversity",
-    organization: "Diversity Plus Magazine"
+    title: "Top 25 Women Impacting Diversity",
+    organization: "MBN News Magazine"
   },
   {
     id: 'award-distinction-2007',
@@ -119,7 +137,7 @@ export const TIMELINE: TimelineEvent[] = [
   },
   {
     id: 'timeline-diagnosis',
-    year: "2018",
+    year: "2017",
     title: "The Turning Point",
     description: "Diagnosed with liver cancer and received a life-saving transplant at Nazih-Zuhdi Transplant Institute."
   },
@@ -130,9 +148,15 @@ export const TIMELINE: TimelineEvent[] = [
     description: "Established the Oklahoma chapter of Transplant Recipients International Organization to support patients."
   },
   {
+    id: 'timeline-honor-gift',
+    year: "2023",
+    title: "Co-lead, Honor the Gift Coalition",
+    description: "Leading efforts to increase organ donation awareness and advocacy."
+  },
+  {
     id: 'timeline-optn',
     year: "2025",
     title: "National Leadership",
-    description: "Appointed to the OPTN Transitional Nominating Committee under HRSA to reform national transplant governance."
+    description: "Appointed to the OPTN Transitional Nominating Committee under HRSA to reform national transplant governance. Vice-Chair of the Patient Affairs Committee OPTN."
   }
 ];

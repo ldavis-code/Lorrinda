@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 
-const CONTACT_EMAIL = 'contact@lorrindagraydavis.com';
+const CONTACT_EMAIL = 'LGD@lorrindagraydavis.com';
 
 // Formspree form ID - Get yours free at https://formspree.io
 // 1. Create account at formspree.io
@@ -117,7 +117,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Based In</h3>
-                    <p className="text-gray-600">Oklahoma, USA</p>
+                    <p className="text-gray-600">Temple, Texas</p>
                     <p className="text-gray-500 text-sm">Available for events nationwide</p>
                   </div>
                 </div>

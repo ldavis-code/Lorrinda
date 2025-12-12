@@ -5,7 +5,7 @@
   position: absolute;
   top: -40px;
   left: 0;
-  background: #0D7377;
+  background: #10b981;
   color: white;
   padding: 8px 16px;
   z-index: 100;
@@ -23,7 +23,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #0D7377;
+  outline: 2px solid #10b981;
   outline-offset: 2px;
 }
 

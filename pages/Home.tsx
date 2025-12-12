@@ -107,8 +107,8 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
-                src="/images/lorrinda-nature.jpg"
-                alt=""
+                src="/images/headshot.jpg"
+                alt="Lorrinda Gray-Davis"
                 className="w-full rounded-2xl shadow-lg"
               />
               {/* Quote overlay */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, Users, Mic, Download } from 'lucide-react';
+import { ArrowRight, Award, Users, Mic } from 'lucide-react';
 import { TIMELINE } from '../constants';
 
 const Home: React.FC = () => {
@@ -162,27 +162,6 @@ const Home: React.FC = () => {
                 <p className="text-gray-600 text-sm">{event.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Bio/Press Kit Section */}
-      <section className="py-12 bg-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div>
-              <h2 className="font-serif text-2xl font-bold text-white italic mb-2">Official Bio</h2>
-              <p className="text-white/80">
-                Download Lorrinda's official biography and headshots for press and event marketing.
-              </p>
-            </div>
-            <a
-              href="/press-kit.pdf"
-              className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              <Download className="mr-2" size={18} />
-              Download Press Kit
-            </a>
           </div>
         </div>
       </section>

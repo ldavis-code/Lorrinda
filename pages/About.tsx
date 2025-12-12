@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { TIMELINE } from '../constants';
 
 const About: React.FC = () => {
@@ -91,20 +91,6 @@ const About: React.FC = () => {
                 </div>
               </div>
 
-              {/* Press Kit Box */}
-              <div className="bg-primary rounded-xl p-6 text-white">
-                <h3 className="font-serif text-xl font-bold mb-2">Official Bio</h3>
-                <p className="text-white/80 text-sm mb-4">
-                  Download Lorrinda's official biography and headshots for press and event marketing.
-                </p>
-                <a
-                  href="/press-kit.pdf"
-                  className="inline-flex items-center justify-center w-full px-4 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
-                >
-                  <Download className="mr-2" size={16} />
-                  Download Press Kit
-                </a>
-              </div>
             </div>
           </div>
         </div>

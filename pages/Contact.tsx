@@ -2,12 +2,7 @@ import React, { useState } from 'react';
 import { Mail, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 
 const CONTACT_EMAIL = 'LGD@lorrindagraydavis.com';
-
-// Formspree form ID - Get yours free at https://formspree.io
-// 1. Create account at formspree.io
-// 2. Create a new form
-// 3. Replace 'YOUR_FORM_ID' with your actual form ID (e.g., 'xpzvqwer')
-const FORMSPREE_ID = 'YOUR_FORM_ID';
+const FORM_NAME = 'contact';
 
 interface FormState {
   status: 'idle' | 'loading' | 'success' | 'error';
@@ -36,20 +31,19 @@ const Contact: React.FC = () => {
     setFormState({ status: 'loading', message: '' });
 
     try {
-      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      const response = await fetch('/', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify({
+        body: new URLSearchParams({
+          'form-name': FORM_NAME,
           name: formData.name,
           email: formData.email,
           organization: formData.organization,
           eventType: formData.eventType,
           message: formData.message,
-          _subject: `Speaking Inquiry from ${formData.name}`,
-        }),
+        }).toString(),
       });
 
       if (response.ok) {
@@ -144,7 +138,14 @@ const Contact: React.FC = () => {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="bg-white border border-gray-200 rounded-xl p-8">
+                <form
+                  name={FORM_NAME}
+                  method="POST"
+                  data-netlify="true"
+                  onSubmit={handleSubmit}
+                  className="bg-white border border-gray-200 rounded-xl p-8"
+                >
+                  <input type="hidden" name="form-name" value={FORM_NAME} />
                   <h2 className="font-serif text-2xl font-bold mb-6">Send a Message</h2>
 
                   <div className="space-y-5">

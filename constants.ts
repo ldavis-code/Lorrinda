@@ -63,18 +63,6 @@ export const AWARDS: Award[] = [
     title: "Top 25 Women Impacting Diversity",
     organization: "MBN News Magazine"
   },
-  {
-    id: 'award-top25-2008',
-    year: "2008",
-    title: "Top 25 Women Impacting Diversity",
-    organization: "MBN News Magazine"
-  },
-  {
-    id: 'award-distinction-2007',
-    year: "2007",
-    title: "Woman of Distinction Finalist",
-    organization: "NAWBO (Southern Nevada Chapter)"
-  }
 ];
 
 export const SPEAKING_TOPICS: SpeakingTopic[] = [

@@ -51,17 +51,11 @@ const Awards: React.FC = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-3xl font-bold text-center mb-12">Impact by the Numbers</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center max-w-3xl mx-auto">
             <div className="bg-white p-8 rounded-xl shadow-sm">
               <div className="text-4xl font-bold text-primary mb-2">$1B+</div>
               <p className="text-gray-600">
                 Awarded to minority and women-owned businesses
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="text-4xl font-bold text-primary mb-2">100K+</div>
-              <p className="text-gray-600">
-                Patients served by OPTN system annually
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm">

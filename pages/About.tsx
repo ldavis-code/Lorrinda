@@ -1,145 +1,127 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Building2, Heart, Users } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
+import { TIMELINE } from '../constants';
 
 const About: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-secondary to-slate-900 text-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
-              About Lorrinda
-            </h1>
-            <p className="text-xl text-slate-200">
-              A journey from corporate executive to national health advocate,
-              driven by resilience, purpose, and an unwavering commitment to service.
-            </p>
-          </div>
+      <section className="bg-gray-100 py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="font-serif text-4xl lg:text-5xl font-bold mb-4">
+            About Lorrinda Gray-Davis
+          </h1>
+          <p className="text-gray-600 text-lg">
+            Executive. Survivor. Advocate. Author.
+          </p>
         </div>
       </section>
 
-      {/* Bio Section */}
+      {/* Main Content with Sidebar */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <img
-                src="/images/lorrinda-headshot.jpg"
-                alt="Lorrinda Gray-Davis - Professional Portrait"
-                className="w-full aspect-square object-cover rounded-2xl shadow-lg mb-6"
-              />
-            </div>
-            <div>
-              <h2 className="font-serif text-3xl font-bold mb-6">The Story</h2>
-              <div className="prose prose-lg text-gray-600 space-y-4">
-                <p>
-                  Lorrinda Gray-Davis's career has been defined by breaking barriers and
-                  building bridges. As the Director of Diversity Development at Perini
-                  Building Company, she led groundbreaking initiatives on the $9 billion
-                  MGM CityCenter project in Las Vegas, one of the largest privately funded
-                  construction projects in U.S. history.
-                </p>
-                <p>
-                  Her work resulted in over a billion dollars being awarded to minority,
-                  minority women, and women-owned businesses, transforming the landscape
-                  of diversity in the construction industry.
-                </p>
-                <p>
-                  In 2018, her life took an unexpected turn when she was diagnosed with
-                  liver cancer. What could have been a devastating setback became the
-                  catalyst for a new chapter of advocacy. After receiving a life-saving
-                  liver transplant at the Nazih-Zuhdi Transplant Institute, Lorrinda
-                  channeled her experience into purpose.
-                </p>
-                <p>
-                  Today, she serves on the OPTN Transitional Nominating Committee under
-                  HRSA, helping to reform the governance of the national organ procurement
-                  and transplantation network that serves over 100,000 patients annually.
-                </p>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Main Content */}
+            <div className="lg:col-span-2 space-y-12">
+              <div>
+                <h2 className="font-serif text-2xl font-bold mb-4">A Career of Breaking Barriers</h2>
+                <div className="text-gray-700 space-y-4">
+                  <p>
+                    Lorrinda Gray-Davis grew up in Oklahoma and has lived across the United States, but her heart has always remained in her home state. Her professional journey is defined by a relentless drive for inclusion. Most notably, while working in Arizona, Nevada, Maryland, California, and Florida, Lorrinda led one of the top General Contractor's Diversity Development Departments nationally.
+                  </p>
+                  <p>
+                    Construction is a notoriously difficult industry for women and minority-owned companies to access. Lorrinda didn't just participate; she changed the landscape. She oversaw the construction spend on major development projects, including the <strong>$9 Billion MGM MIRAGE Project CityCenter</strong> and the <strong>$4 Billion Cosmopolitan</strong>, both in Las Vegas.
+                  </p>
+                  <p>
+                    Her programs resulted in over $1.2 Billion spent with Women, Minority, Small, and Veteran Owned Companies on these projects. She gave these businesses a "seat at the table," allowing them to grow bonding capacity and financial stability.
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Values Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl font-bold text-center mb-12">Core Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-md">
-              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                <Building2 className="text-primary" size={24} />
+              <div>
+                <h2 className="font-serif text-2xl font-bold mb-4">The Diagnosis That Changed Everything</h2>
+                <div className="text-gray-700 space-y-4">
+                  <p>
+                    Nine months after relocating back to Oklahoma to work for a general contractor, Lorrinda was diagnosed with liver cancer. The news sent a shockwave through her life. In August of 2018, she received a life-saving liver transplant at Nazih-Zuhdi Transplant Institute, Integris Baptist Hospital.
+                  </p>
+                  <p>
+                    The work of her doctors and nurses inspired her to contribute in new ways. Five months post-op, she was appointed as a National Board Member of Transplant Recipients International Organization (TRIO). In 2020, she founded <strong>TRIO-Oklahoma</strong>. She serves as President of Transplant Recipients International Organization and stays involved in TRIO-Oklahoma to provide mentorship and support to others walking the frightening path of organ failure.
+                  </p>
+                </div>
               </div>
-              <h3 className="font-serif text-xl font-bold mb-3">Diversity & Inclusion</h3>
-              <p className="text-gray-600">
-                Creating pathways for underrepresented communities in business and
-                healthcare, moving beyond compliance to genuine culture change.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-md">
-              <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mb-4">
-                <Heart className="text-accent" size={24} />
-              </div>
-              <h3 className="font-serif text-xl font-bold mb-3">Health Advocacy</h3>
-              <p className="text-gray-600">
-                Championing organ donation awareness, patient rights, and equitable
-                access to healthcare for all communities.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-md">
-              <div className="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
-                <Users className="text-secondary" size={24} />
-              </div>
-              <h3 className="font-serif text-xl font-bold mb-3">Community Connection</h3>
-              <p className="text-gray-600">
-                Building networks of support and understanding, because human
-                connection is vital medicine for survival and success.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Organizations Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl font-bold text-center mb-12">Affiliations & Service</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="border border-gray-200 rounded-lg p-6">
-              <h3 className="font-semibold text-lg mb-2">OPTN Transitional Nominating Committee</h3>
-              <p className="text-gray-600 text-sm">Appointed by HRSA (2025)</p>
+              <div>
+                <h2 className="font-serif text-2xl font-bold mb-4">Leading on a National Stage</h2>
+                <div className="text-gray-700 space-y-4">
+                  <p>
+                    Today, Lorrinda combines her corporate governance expertise with her patient advocacy. In 2025, she was appointed to the <strong>OPTN Transitional Nominating Committee</strong> under HRSA to reform the governance of the entire US organ transplant system. She also serves as the <strong>Vice Chair of the Patient Affairs Committee</strong> and is a <strong>Committee member of the Policy Oversight Committee</strong> for the OPTN.
+                  </p>
+                  <p>
+                    Under her leadership, TRIO hosts the largest donor remembrance in the United States, the <strong>Remember & Rejoice Ceremony</strong> at St. Patrick's Cathedral in New York City. Lorrinda had the distinct honor of being the opening and closing speaker for this prestigious event in both 2024 and 2025.
+                  </p>
+                  <p>
+                    Whether she is advising federal agencies or mentoring a newly diagnosed patient, Lorrinda Gray-Davis is committed to making a difference.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="border border-gray-200 rounded-lg p-6">
-              <h3 className="font-semibold text-lg mb-2">TRIO Oklahoma</h3>
-              <p className="text-gray-600 text-sm">Founder (2020)</p>
-            </div>
-            <div className="border border-gray-200 rounded-lg p-6">
-              <h3 className="font-semibold text-lg mb-2">Global Liver Institute</h3>
-              <p className="text-gray-600 text-sm">Advocate & Award Recipient</p>
-            </div>
-            <div className="border border-gray-200 rounded-lg p-6">
-              <h3 className="font-semibold text-lg mb-2">Women's Chamber of Commerce Nevada</h3>
-              <p className="text-gray-600 text-sm">Hall of Fame Inductee (2010)</p>
+
+            {/* Sidebar */}
+            <div className="lg:col-span-1 space-y-8">
+              {/* Journey Highlights */}
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                <h3 className="font-serif text-xl font-bold mb-6">Journey Highlights</h3>
+                <div className="space-y-6">
+                  {TIMELINE.map((event, index) => (
+                    <div key={event.id} className="flex gap-4">
+                      <div className="flex flex-col items-center">
+                        <div className="w-3 h-3 bg-primary rounded-full"></div>
+                        {index < TIMELINE.length - 1 && (
+                          <div className="w-0.5 h-full bg-gray-200 mt-2"></div>
+                        )}
+                      </div>
+                      <div className="pb-6">
+                        <span className="text-primary font-semibold text-sm">{event.year}</span>
+                        <h4 className="font-semibold text-gray-900">{event.title}</h4>
+                        <p className="text-gray-600 text-sm mt-1">{event.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Press Kit Box */}
+              <div className="bg-primary rounded-xl p-6 text-white">
+                <h3 className="font-serif text-xl font-bold mb-2">Official Bio</h3>
+                <p className="text-white/80 text-sm mb-4">
+                  Download Lorrinda's official biography and headshots for press and event marketing.
+                </p>
+                <a
+                  href="/press-kit.pdf"
+                  className="inline-flex items-center justify-center w-full px-4 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
+                >
+                  <Download className="mr-2" size={16} />
+                  Download Press Kit
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-white">
+      <section className="py-16 bg-secondary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl font-bold mb-4">
             Let's Connect
           </h2>
-          <p className="text-emerald-200 mb-8">
+          <p className="text-slate-300 mb-8">
             Interested in having Lorrinda speak at your event or collaborate on advocacy initiatives?
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
           >
             Get in Touch
             <ArrowRight className="ml-2" size={18} />

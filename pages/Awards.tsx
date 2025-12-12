@@ -1,76 +1,45 @@
 import React from 'react';
-import { Award, Star, Trophy } from 'lucide-react';
+import { Award } from 'lucide-react';
 import { AWARDS } from '../constants';
 
 const Awards: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-emerald-900 text-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
-              Awards & Recognition
-            </h1>
-            <p className="text-xl text-emerald-100">
-              A career dedicated to service, recognized by organizations
-              across the nation for impact in diversity, advocacy, and leadership.
-            </p>
-          </div>
+      <section className="bg-gray-100 py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="font-serif text-4xl lg:text-5xl font-bold mb-4">
+            Recognition & Awards
+          </h1>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            A lifetime of service recognized by government, industry, and community organizations.
+          </p>
         </div>
       </section>
 
-      {/* Featured Award */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12 max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
-                <Trophy className="text-accent" size={32} />
-              </div>
-              <div>
-                <span className="text-accent font-semibold">2025 - Featured</span>
-                <h2 className="font-serif text-2xl lg:text-3xl font-bold">
-                  OPTN Transitional Nominating Committee
-                </h2>
-              </div>
-            </div>
-            <p className="text-gray-600 text-lg mb-4">
-              Appointed by the Health Resources & Services Administration (HRSA)
-            </p>
-            <p className="text-gray-700">
-              Selected to help reform the governance of the Organ Procurement and
-              Transplantation Network (OPTN), a critical system serving over 100,000
-              patients annually awaiting life-saving organ transplants. This appointment
-              represents the culmination of years of advocacy work and a commitment to
-              improving healthcare equity at the national level.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* All Awards */}
+      {/* Awards List */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl font-bold text-center mb-12">Recognition Timeline</h2>
-          <div className="space-y-6 max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-4">
             {AWARDS.map((award) => (
               <div
                 key={award.id}
-                className="flex gap-6 items-start bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow"
+                className="bg-white border border-gray-200 rounded-xl p-6 flex items-start gap-4 hover:shadow-md transition-shadow"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 bg-primary/5 rounded-lg flex flex-col items-center justify-center">
-                    <Award className="text-primary mb-1" size={24} />
-                    <span className="text-primary font-bold text-sm">{award.year}</span>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Award className="text-primary" size={24} />
                   </div>
                 </div>
-                <div className="flex-grow">
-                  <h3 className="font-serif text-xl font-bold mb-1">{award.title}</h3>
-                  <p className="text-primary font-medium text-sm mb-2">{award.organization}</p>
+                <div className="flex-grow min-w-0">
+                  <h3 className="font-serif text-lg font-bold text-gray-900">{award.title}</h3>
+                  <p className="text-primary font-medium text-sm">{award.organization}</p>
                   {award.description && (
-                    <p className="text-gray-600 text-sm">{award.description}</p>
+                    <p className="text-gray-600 text-sm mt-2">{award.description}</p>
                   )}
+                </div>
+                <div className="flex-shrink-0">
+                  <span className="text-gray-500 font-medium">{award.year}</span>
                 </div>
               </div>
             ))}
@@ -79,25 +48,25 @@ const Awards: React.FC = () => {
       </section>
 
       {/* Impact Stats */}
-      <section className="py-16 bg-secondary text-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-3xl font-bold text-center mb-12">Impact by the Numbers</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center max-w-3xl mx-auto">
-            <div>
-              <div className="flex items-center justify-center mb-4">
-                <Star className="text-accent" size={32} />
-              </div>
-              <div className="text-5xl font-bold mb-2">$1B+</div>
-              <p className="text-slate-300">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-xl shadow-sm">
+              <div className="text-4xl font-bold text-primary mb-2">$1B+</div>
+              <p className="text-gray-600">
                 Awarded to minority and women-owned businesses
               </p>
             </div>
-            <div>
-              <div className="flex items-center justify-center mb-4">
-                <Star className="text-accent" size={32} />
-              </div>
-              <div className="text-5xl font-bold mb-2">15+</div>
-              <p className="text-slate-300">
+            <div className="bg-white p-8 rounded-xl shadow-sm">
+              <div className="text-4xl font-bold text-primary mb-2">100K+</div>
+              <p className="text-gray-600">
+                Patients served by OPTN system annually
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-sm">
+              <div className="text-4xl font-bold text-primary mb-2">15+</div>
+              <p className="text-gray-600">
                 Years of advocacy and leadership
               </p>
             </div>

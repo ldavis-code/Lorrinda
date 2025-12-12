@@ -1,25 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, Mic, Heart, ExternalLink } from 'lucide-react';
-import { TESTIMONIALS, TIMELINE } from '../constants';
+import { ArrowRight, Award, Users, Mic, Download } from 'lucide-react';
+import { TIMELINE } from '../constants';
 
 const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-emerald-900 text-white py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gray-900 text-white py-20 lg:py-32">
+        {/* Background image with overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-30"
+          style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/95 to-gray-900/70"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             {/* Featured badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/30 bg-white/10 mb-8">
-              <span className="w-2 h-2 bg-white rounded-full"></span>
-              <span className="text-sm font-medium text-white">Featured in Cancer Today, Summer 2025</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/50 bg-primary/10 mb-8">
+              <span className="w-2 h-2 bg-primary rounded-full"></span>
+              <span className="text-sm font-medium text-primary">Featured in Cancer Today, Summer 2025</span>
             </div>
 
             <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
-              The Power of <span className="italic text-emerald-200">Connection</span>
+              The Power of <span className="italic text-primary">Connection</span>
             </h1>
-            <p className="text-lg lg:text-xl text-emerald-100 mb-10 max-w-2xl">
+            <p className="text-lg lg:text-xl text-gray-300 mb-10 max-w-2xl">
               From overseeing billion-dollar construction diversity initiatives to
               reforming national organ transplant governance. Lorrinda Gray-Davis is
               a voice for the silenced and a leader for the future.
@@ -27,150 +34,131 @@ const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-emerald-50 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
               >
-                Book Lorrinda
+                Book for Speaking
                 <ArrowRight className="ml-2" size={18} />
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-500 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
               >
-                About Lorrinda
+                Read Biography
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured In Section */}
-      <section className="py-12 bg-white border-b">
+      {/* Credentials Bar */}
+      <section className="py-8 bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            <div className="lg:w-1/3">
-              <a
-                href="https://www.cancertodaymag.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block hover:opacity-90 transition-opacity"
-              >
-                <img
-                  src="/images/cancer-today-cover.jpg"
-                  alt="Cancer Today Magazine Cover - Summer 2025 featuring Lorrinda Gray-Davis"
-                  className="w-full max-w-xs mx-auto rounded-lg shadow-lg"
-                />
-              </a>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center gap-4 p-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <Award className="text-primary" size={24} />
+              </div>
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-wide">2025 Appointment</p>
+                <p className="font-semibold text-gray-900">OPTN Nominating Committee</p>
+              </div>
             </div>
-            <div className="lg:w-2/3 text-center lg:text-left">
-              <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">Featured In</p>
-              <h2 className="font-serif text-3xl font-bold mb-4">Cancer Today Magazine</h2>
-              <p className="text-gray-600 mb-4">
-                Cover story: <strong>"The Power of Connection"</strong> — After receiving a new liver,
-                cancer survivor Lorrinda Gray-Davis supports the transplant community through advocacy,
-                education, and the healing power of human connection.
-              </p>
-              <p className="text-sm text-gray-500 mb-4">
-                Summer 2025 | Vol. 15, Issue 02 | American Association for Cancer Research
-              </p>
-              <a
-                href="https://www.cancertodaymag.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-primary font-semibold hover:underline"
-              >
-                Read the Article
-                <ExternalLink className="ml-2" size={16} />
-              </a>
+            <div className="flex items-center gap-4 p-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <Users className="text-primary" size={24} />
+              </div>
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-wide">Leadership</p>
+                <p className="font-semibold text-gray-900">President, TRIO Oklahoma</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 p-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <Mic className="text-primary" size={24} />
+              </div>
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-wide">Speaker</p>
+                <p className="font-semibold text-gray-900">Diversity & Resilience</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Highlights Section */}
-      <section className="py-16 bg-gray-50">
+      {/* About Preview Section */}
+      <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-md text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mic className="text-primary" size={28} />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <img
+                src="/images/lorrinda-nature.jpg"
+                alt="Lorrinda Gray-Davis"
+                className="w-full rounded-2xl shadow-lg"
+              />
+              {/* Quote overlay */}
+              <div className="absolute bottom-0 right-0 translate-x-4 translate-y-4 lg:translate-x-8 lg:translate-y-8 bg-white p-6 rounded-xl shadow-lg max-w-xs">
+                <p className="text-gray-700 italic text-sm">
+                  "Whether in the construction industry or the transplant community, Ms. Gray-Davis is always striving for more."
+                </p>
               </div>
-              <h3 className="font-serif text-xl font-bold mb-2">Speaker</h3>
-              <p className="text-gray-600 text-sm">
-                Inspiring audiences with stories of resilience, diversity, and the power of connection.
-              </p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-md text-center">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="text-accent" size={28} />
+            <div>
+              <h2 className="font-serif text-3xl lg:text-4xl font-bold mb-6">
+                Championing Diversity. Advocating for Life.
+              </h2>
+              <div className="text-gray-600 space-y-4">
+                <p>
+                  Lorrinda Gray-Davis is a force of nature. Formerly a top executive overseeing diversity for a $9 billion construction project, she shattered glass ceilings in a male-dominated industry.
+                </p>
+                <p>
+                  In 2018, her life took a dramatic turn with a liver cancer diagnosis. Today, as a transplant survivor, she applies that same executive leadership to advocate for patients nationwide, serving on federal committees and inspiring audiences with her story of resilience.
+                </p>
               </div>
-              <h3 className="font-serif text-xl font-bold mb-2">Advocate</h3>
-              <p className="text-gray-600 text-sm">
-                Fighting for organ donation awareness and health equity at the national level.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-md text-center">
-              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="text-secondary" size={28} />
-              </div>
-              <h3 className="font-serif text-xl font-bold mb-2">Leader</h3>
-              <p className="text-gray-600 text-sm">
-                Appointed to OPTN Transitional Nominating Committee, shaping transplant policy.
-              </p>
+              <Link
+                to="/about"
+                className="inline-flex items-center mt-6 text-primary font-semibold hover:underline"
+              >
+                Read Full Story
+                <ArrowRight className="ml-2" size={16} />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* Timeline Section */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-3xl font-bold text-center mb-12">A Journey of Impact</h2>
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-200 hidden md:block"></div>
-            <div className="space-y-8">
-              {TIMELINE.map((event, index) => (
-                <div
-                  key={event.id}
-                  className={`flex flex-col md:flex-row items-center ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
-                >
-                  <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                      <span className="text-primary font-semibold">{event.year}</span>
-                      <h3 className="font-serif text-xl font-bold mt-1">{event.title}</h3>
-                      <p className="text-gray-600 mt-2 text-sm">{event.description}</p>
-                    </div>
-                  </div>
-                  <div className="hidden md:flex w-4 h-4 bg-primary rounded-full z-10"></div>
-                  <div className="w-full md:w-1/2"></div>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {TIMELINE.map((event) => (
+              <div key={event.id} className="bg-white p-6 rounded-xl shadow-sm">
+                <span className="text-primary font-semibold text-sm">{event.year}</span>
+                <h3 className="font-serif text-lg font-bold mt-1 mb-2">{event.title}</h3>
+                <p className="text-gray-600 text-sm">{event.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16 bg-secondary text-white">
+      {/* Bio/Press Kit Section */}
+      <section className="py-12 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl font-bold text-center mb-12">What Others Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {TESTIMONIALS.map((testimonial) => (
-              <div key={testimonial.id} className="bg-white/10 backdrop-blur p-6 rounded-lg">
-                <p className="text-slate-200 italic mb-4">"{testimonial.text}"</p>
-                <div>
-                  <p className="font-semibold">{testimonial.author}</p>
-                  <p className="text-slate-300 text-sm">{testimonial.title}</p>
-                  {testimonial.organization && (
-                    <p className="text-slate-400 text-sm">{testimonial.organization}</p>
-                  )}
-                  {testimonial.year && (
-                    <p className="text-slate-400 text-sm">{testimonial.year}</p>
-                  )}
-                </div>
-              </div>
-            ))}
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <h2 className="font-serif text-2xl font-bold text-white italic mb-2">Official Bio</h2>
+              <p className="text-white/80">
+                Download Lorrinda's official biography and headshots for press and event marketing.
+              </p>
+            </div>
+            <a
+              href="/press-kit.pdf"
+              className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              <Download className="mr-2" size={18} />
+              Download Press Kit
+            </a>
           </div>
         </div>
       </section>
@@ -181,12 +169,12 @@ const Home: React.FC = () => {
           <h2 className="font-serif text-3xl font-bold text-white mb-4">
             Ready to Inspire Your Audience?
           </h2>
-          <p className="text-slate-200 mb-8">
+          <p className="text-slate-300 mb-8">
             Book Lorrinda for your next event, conference, or organization meeting.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-white text-secondary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
           >
             Get in Touch
             <ArrowRight className="ml-2" size={18} />
